@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Markdown Editor en Vivo - Coderk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Toolbar -->
+  <header class="toolbar fixed top-0 w-full bg-slate-800 z-10 p-3 flex gap-2 justify-center">
+    <button id="previewBtn" class="btn-primary">
+      Generar Vista Previa 
+    </button>
+    <button id="contrastBtn" class="btn-secondary">
+      Contrastar Encabezados // Coderk
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex flex-1 pt-20 gap-4 p-4 overflow-hidden">
+
+    <!-- Editor -->
+    <section class="w-1/2 flex flex-col">
+      <h2 class="text-lg mb-2 font-bold">Editor Markdown</h2>
+      <textarea
+        id="editor"
+        class="flex-1 p-3 bg-slate-800 rounded resize-none overflow-auto"
+        placeholder="# Título\n\n- Lista\n- Lista"
+      ></textarea>
+      <p id="counter" class="text-sm text-slate-400 mt-2">0 caracteres</p>
+    </section>
+
+    <!-- Preview -->
+    <section class="w-1/2 flex flex-col">
+      <h2 class="text-lg mb-2 font-bold">Vista Previa</h2>
+      <div
+        id="preview"
+        class="flex-1 p-3 bg-slate-800 rounded overflow-auto"
+      ></div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-xs text-slate-500 p-2">
+    Laboratorio 09 · DOM como API de Objetos
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
